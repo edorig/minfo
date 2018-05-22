@@ -1,0 +1,177 @@
+Tue Oct 28 17:49:26 MET 1997 Marcin Dalecki
+
+	* Bookmark menu support added. Tought, we don't preserve the
+	bookmark list between different sessions.
+	
+	* Added and the ability to open files in place! Once again the
+	strtok() libc call hase proven itself to be usefull for nothing...
+
+	* Added notes about -file and -path command line options to the
+	Help menu.
+
+Tue Oct 28 02:10:04 MET 1997 Marcin Dalecki
+
+	* First chunks for bookmark support added.
+	
+	* Resolved problems in parsing menu entries, which contain both:
+	file references as well as node names for those files.
+
+Sun Oct 26 15:09:02 MET 1997 Marcin Dalecki
+
+	* Luxury highlighting of itemized lists.
+	
+	* Distinctive colors for links visited during that session and
+	for links not already visited.
+
+Sat Oct 25 23:15:35 MET 1997 Marcin Dalecki
+
+	* Cross file note support. There that many new features/bugfixes,
+	that we should consider it to bump the version to 2.xx
+	
+	* Luxury highlighting of notes and menu points.
+	
+	* Display foonote bar instead of the ugly text.
+	
+Sat Oct 25 15:38:58 MET 1997 Marcin Dalecki
+
+	* Fixed highlighting for multiple notes in line.
+	
+	* Highlighting of top titles in multiple fonts.
+	
+Fri Oct 24 21:22:15 MET 1997 Marcin Dalecki
+
+	* Fixed case of drwing middle chunk of highlighted xref/menu.
+	
+	* Use preparsed information about indirections in the handling of
+	clicks in the display area instead of on the fly parsing the text
+	content. Much more reliable now!
+
+Fri Oct 24 01:16:03 MET 1997 Marcin Dalecki
+
+	* First structutre highlighting imlpemented for notes ans menu
+	points. This is really worth it!
+
+Thu Oct 23 19:55:01 MET 1997 Marcin Dalecki 
+
+	* Finally found the way, how to implement custom highlighting
+	in Motif's text widget. We are doing it now, by substituting an
+	corresponding routine pointer in the text display widget record.
+	
+	As of current we used this only to imelpemnt reasonable
+	highlighting of slections. More will follow soon.
+	
+	* Preserving of the original position implemented between wolks on
+	the pages. Slowly but surely, we bacame really THE reader of
+	choice.
+
+Thu Aug 21 19:11:54 MET DST 1997 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Tip help technology takover from the me2 project. Finally this
+	is the clean way to implement it :-).
+
+	* Take over of the PixmapButton creation technology from the me2 
+	project.
+
+	* Take over switched tool bars technology from me2 project.
+	
+	* Adjust general look to be more CDE alike. Sorry I don't have CDE
+	on my developement engine itself. Therefore it isn't possible for
+	me to make this app really CDE compilant :-(.
+
+	If somebody would be so kind to donate CDE for Linux to me...
+
+	* Moved alot of String settings into reosurces for easier
+	internationalization.
+	
+	* Added poopup menu to the display area.
+
+Mon Jun  9 19:41:47 MET DST 1997 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Fixed problems in finding info nodes which are registered as
+	(bla) in the topmost dir directory, but which are installed as
+	bla.info.gz. Many thank's to anybody who pointed me at this
+	oversight!!! Esp.:  Thomas M. Ott, ...
+
+Tue Apr 22 01:36:35 MET DST 1997 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Improved handling of pixmaps taken over from the medit project.
+	There shuldn't be any problems with the colormap handling in 
+	"cooperation" with humble colormap eaters like netscape for
+	example anymore.
+
+	* Properly override the translations for osfUp and osfDown to get
+	the right behaviour for an display only text widget.
+
+Mon Apr 14 09:40:48 MET DST 1997 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Clicking in the main window correctly implemented by hooking
+	into the corresponding button press event instead of the ugly
+	motion verify callback! Push the version number once again. This
+	is an important step.
+
+Thu Apr 10 10:00:14 MET DST 1997 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* First really working version of tip code inserted.
+	
+Thu Apr 10 02:10:17 MET DST 1997 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Warning cleanup. Started with tip-code on the button bar.
+
+Sun Apr  6 16:16:54 MET 1997 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Protoize all. New string list utility routines
+	create_XmString_list() and free_XmString_list().
+
+Mon Jan 13 22:05:43 MET 1997 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Resizing of the status text works now. Center the about message
+	lines.
+
+Tue Dec 17 00:08:15 MET 1996 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Fixed an bug in the file_cache handing during the lookup of
+	nodes.
+
+Thu Dec 12 03:03:40 MET 1996 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Searching is working now!
+
+Wed Dec 11 20:45:15 MET 1996 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Made lookup_node_in_file() from file_ops.c recursion save.
+
+Wed Dec 11 01:35:15 MET 1996  Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Hah! the Open File menu option is functional now!
+
+Tue Dec 10 19:12:38 MET 1996 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Undo the usage of XmString for the location label. It is better
+	to do  it the same way like in netsacpe.
+
+	* Use the motionVerify callback for clicking through menus. (It's
+	far better to don't have cursor movements in the text instead of
+	the  creazy multiclicking. Position the cursor on the scrollbar if
+	You  want cursor scrolling. Tough someboby with long enought
+	breath could  find the corresponding resource settings needed to
+	make them come  back.
+
+Tue Dec 10 01:43:45 MET 1996 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Fixed a reference to NULL pointer in files_ops.
+	
+	* Try to extend file names in file indirected nodes by .info in
+	case of failure, just to cover some more wired cases.
+
+	* Use a XmString label with an corresponding border for the
+	displaying of the location.
+
+	* Add an search button. Currently without functionality.
+	
+	* Make Open File work.
+
+Sat Dec  7 02:37:19 MET 1996 Marcin Dalecki <dalecki@sub994.sub.uni-goettingen.de>
+
+	* Corrected the handling of clipping in the icon creation.
+
+	* Some significant code duplication reduction.

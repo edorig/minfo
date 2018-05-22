@@ -1,0 +1,99 @@
+# DON'T INSTALL THIS IS ONLY FOR REFFERENCE!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# DON'T INSTALL THIS IS ONLY FOR REFFERENCE!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+MInfo*DirPath: /usr/info/:/usr/local/info/
+MInfo*DirFile: dir
+MInfo*background; #c3c3c3
+MInfo*enableEtchedInMenu: True
+MInfo*enableDefaultButton: True
+MInfo*enableThinThickness: True
+MInfo*detailShadowThickness: 1
+MInfo*menuBar.*.shadowThickness: 1
+MInfo*XmPushButton.shadowThickness: 1
+MInfo*menuBar.*.XmSeparatorGadget.shadowThickness: 2
+MInfo*highlightThickness: 1
+MInfo*pane.separatorOn: True
+MInfo*fontList: -b&h-lucida-medium-r-normal-sans-12-*-*-*-*-*-iso8859-*
+MInfo*XmTextField.fontList: -adobe-courier-medium-r-normal-*-12-*-*-*-*-*-*-*
+MInfo*XmText.fontList: -b&h-*-medium-*-*-*-12-*-*-*-m-*-iso8859-1
+MInfo*XmText.scrollLeftSide: True
+MInfo*XmList*fontList:-adobe-courier-medium-r-normal-*-12-*-*-*-*-*-*-*
+MInfo*XmText.foreground: black
+MInfo*XmTextField.foreground: Black
+MInfo*XmTextField.background: gainsboro
+MInfo*XmList.foreground: Black
+MInfo*XmList.background: gainsboro
+MInfo*tipShell.background: lemon chiffon
+MInfo*tipShell.fontSet: -*-helvetica-medium-r-*-*-*-120-*-*-*-*-iso8859-*
+MInfo*buttonLine.?.shadowThickness: 1
+MInfo*buttonLine.?.highlightThickness: 0
+MInfo*buttonLine.?.highlightOnEnter: False
+MInfo*buttonLine.switchButton.marginWidth: 0
+MInfo*buttonLine.marginWidth: 0
+MInfo*buttonLine.marginHeight: 0
+MInfo*buttonLine.spacing: 0
+MInfo*buttonLine.entryBorder: 0
+MInfo*buttonLine.entryAlignment: ALIGNMENT_CENTER
+MInfo*buttonLine.resizeWidth: True
+MInfo*buttonLine.resizeHeight: True
+MInfo*locationLine,shadowThickness: 1
+MInfo*locationLine.?.shadowThickness: 1
+MInfo*locationLine.?.highlightThickness: 0
+MInfo*locationLine.?.highlightOnEnter: False
+MInfo*locationLine.switchButton.marginWidth: 0
+MInfo*locationLine.marginWidth: 0
+MInfo*locationLine.marginHeight: 0
+MInfo*locationLine.spacing: 0
+MInfo*locationLine.entryBorder: 0
+MInfo*locationLine.entryAlignment: ALIGNMENT_CENTER
+MInfo*locationLine.resizeWidth: True
+MInfo*locationLine.resizeHeight: True
+MInfo*locationLine.marginWidth: 0
+MInfo*locationLine.marginHeight: 2
+MInfo*locationLine.XmTextField.topOffset: 3
+MInfo*locationLine.XmTextField.bottomOffset: 3
+MInfo*locationLine.XmTextField.marginWidth: 2
+MInfo*locationLine.XmTextField.marginHeight: 2
+MInfo*locationLine.XmTextField.rightOffset: 4
+MInfo*locationLine.XmTextField*background: white
+MInfo*offLine.?.shadowThickness: 1
+MInfo*offLine.?.highlightThickness: 0
+MInfo*offLine.?.highlightOnEnter: False
+MInfo*offLine.?.marginLeft: 3
+MInfo*offLine.?.marginRight: 1
+MInfo*offLine.?.marginHeight: 0
+MInfo*offLine.spacing: 0
+MInfo*nodeText.highlightThickness: 0
+MInfo*nodeText.shadowThickness: 1
+MInfo*nodeText.borderWidth: 0
+MInfo*aboutDialog*shadowThickness: 1
+MInfo*aboutDialog.XmSeparatorGadget.shadowThickness: 2
+MInfo*aboutDialog.dialogTitle: About Minfo: 
+MInfo*helpDialog*shadowThickness: 1
+MInfo*helpDialog.XmSeparatorGadget.shadowThickness: 2
+MInfo*helpDialog.dialogTitle: Help for Minfo: 
+MInfo*searchDialog.XmPushButton.shadowThickness: 1
+MInfo*searchDialog.XmPushButtonGadget.shadowThickness: 1
+MInfo*searchDialog.XmSeparatorGadget.shadowThickness: 2
+MInfo*searchDialog.dialogTitle: Search:
+MInfo*searchDialog.findButton.labelString: Find
+MInfo*searchDialog.clearButton.labelString: Clear
+MInfo*searchDialog.closeButton.labelString: Close
+MInfo*searchDialog.*.findLabel.labelString: Find: 
+MInfo*searchDialog.*.caseToggle.labelString: Case Sensitive
+MInfo*searchDialog.*.findToggle.labelString: Find Backwards
+MInfo*menuDialog.dialogTitle: Select From Menu
+MInfo*menuDialog.*.shadowThickness: 1
+MInfo*menuDialog.XmSeparatorGadget.shadowThickness: 2
+MInfo*xrefDialog.dialogTitle: Select a Refference
+MInfo*xrefDialog.*.shadowThickness: 1
+MInfo*xrefDialog.XmSeparatorGadget.shadowThickness: 2
+MInfo*fileDialog.dialogTitle: Select a DIR Node File
+MInfo*fileDialog.*.shadowThickness: 1
+MInfo*fileDialog.XmSeparatorGadget.shadowThickness: 2
+MInfo*dirFailedDialog.dialogTitle: Error!
+MInfo*dirFailedDialog.*.shadowThickness: 1
+MInfo*dirFailedDialog.XmSeparatorGadget.shadowThickness: 2
+MInfo*highlightBackgroundPixel: lemon chiffon
+MInfo*highlightForegroundPixel: navy
+MInfo*popupMenu.*.shadowThickness: 1

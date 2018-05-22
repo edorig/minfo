@@ -1,0 +1,16 @@
+/* XPM */
+static char * horizontal_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"20 6 4 1",
+/* colors */
+"  c None	s mask",
+"X c darkgray	s shade2",
+"+ c lightgray	s shade0",
+"# c black",
+/* pixels */
+"                    ",
+"#      +  +  +  +  +",
+"##      X  X  X  X  ",
+"# #     +  +  +  +  ",
+"# +      X  X  X  X ",
+"#+                  "};

@@ -1,0 +1,106 @@
+\input texinfo @c -*- texinfo -*-
+@c %**start of header
+@setfilename minfo.info
+@settitle General Purpose PostScript Generating Utility
+@c %**end of header
+
+@set EDITION 1.7.16
+@set VERSION 1.7.16
+
+@c short cut for minfo
+@macro pack
+@code{minfo}
+@end macro
+
+@titlepage
+@title minfo, version @value{VERSION}
+@subtitle minfo GNU-info Documentation Browser
+@author Marcin Dalecki
+
+@page
+@vskip 0pt plus 1filll
+Copyright @copyright{} 1996, 97 Marcin Dalecki
+
+Permission is granted to make and distribute verbatim copies of
+this manual provided the copyright notice and this permission notice
+are preserved on all copies.
+
+Permission is granted to copy and distribute modified versions of this
+manual under the conditions for verbatim copying, provided that the entire
+resulting derived work is distributed under the terms of a permission
+notice identical to this one.
+
+Permission is granted to copy and distribute translations of this manual
+into another language, under the above conditions for modified versions,
+except that this permission notice may be stated in a translation approved
+by the Foundation.
+@end titlepage
+
+@syncodeindex vr cp
+@syncodeindex fn cp
+@synindex pg cp
+
+@ifinfo
+@node Top, Introduction, (dir), (dir)
+@top minfo
+
+@menu
+Introduction
+* Introduction::    	    	    Forewords
+* Invokation::	    	    	    Options options options...
+@end menu
+
+@end ifinfo
+
+@node Introduction, Invokation, Top, Top
+@chapter Introduction
+
+This document describes @pack version @value{VERSION}. This is the second
+sound official release of this program. After the encouragement from the
+people which where already using the previous releases, I decided before
+about two weeks to spend some more significant time on this project.
+
+Most notably I gained (IMHO) a lot more expierence in Motif/Xt/X11
+programming in general. Much of this came from the excellent test program
+set provided with the still onging free Motif clone called lesstif.
+
+Further on there are some other non free projects I was doing in parallel,
+where much of the technics where borrowed from ofter discovering them.
+
+The main new features are:
+
+@enumerate
+@item
+Various bugfixes;
+
+@item
+Compleatly new look and feel. It's now not as close as possible to
+Mozialla-3.xx anylonger. Insted I implemented something what is suiting my
+personal taste little more.
+
+Before critisizing me for my taste, please bear in mind that I'm born
+@emph{directly} on the Baltic coast. Maybe therefore I preffer darkish
+metal blue shades :-).
+
+@item
+Unique technique for implementation of tips on buttons, which doesn't rely
+on the active status of those widgets and enter leave on events on the
+windows associated with theyr background. It's still not quite perfect,
+but at least the correct implementation road is shown.
+
+@item
+The button shape library is now much less of a mess then it used to be.
+Most notably the background color of the buttons are now compleatly
+adaptive to the shape colors of the associated widget.
+
+@item
+I discovered finally a way how to manipulate the output drawing in plain
+Motif text widgets, without relying on features, which can be only found
+in the not widly accepted 2.0 of this tyranosaurus rex of software design
+blow.
+
+
+@end enumerate
+
+@node Invokation, , Introduction, Top
+@bye

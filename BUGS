@@ -1,0 +1,4 @@
+The program can crash when the function parse_top of parse.c 
+is called. The crash seems to result from the call to strdup/strlen 
+in that function. 
+

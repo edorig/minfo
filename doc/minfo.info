@@ -1,0 +1,73 @@
+This is minfo.info, produced by makeinfo version 4.13 from minfo.texi.
+
+
+File: minfo.info,  Node: Top,  Next: Introduction,  Prev: (dir),  Up: (dir)
+
+minfo
+*****
+
+* Menu:
+
+Introduction
+* Introduction::    	    	    Forewords
+* Invokation::	    	    	    Options options options...
+
+
+File: minfo.info,  Node: Introduction,  Next: Invokation,  Prev: Top,  Up: Top
+
+1 Introduction
+**************
+
+This document describes `minfo' version 1.7.16. This is the second
+sound official release of this program. After the encouragement from the
+people which where already using the previous releases, I decided before
+about two weeks to spend some more significant time on this project.
+
+   Most notably I gained (IMHO) a lot more expierence in Motif/Xt/X11
+programming in general. Much of this came from the excellent test
+program set provided with the still onging free Motif clone called
+lesstif.
+
+   Further on there are some other non free projects I was doing in
+parallel, where much of the technics where borrowed from ofter
+discovering them.
+
+   The main new features are:
+
+  1. Various bugfixes;
+
+  2. Compleatly new look and feel. It's now not as close as possible to
+     Mozialla-3.xx anylonger. Insted I implemented something what is
+     suiting my personal taste little more.
+
+     Before critisizing me for my taste, please bear in mind that I'm
+     born _directly_ on the Baltic coast. Maybe therefore I preffer
+     darkish metal blue shades :-).
+
+  3. Unique technique for implementation of tips on buttons, which
+     doesn't rely on the active status of those widgets and enter leave
+     on events on the windows associated with theyr background. It's
+     still not quite perfect, but at least the correct implementation
+     road is shown.
+
+  4. The button shape library is now much less of a mess then it used
+     to be.  Most notably the background color of the buttons are now
+     compleatly adaptive to the shape colors of the associated widget.
+
+  5. I discovered finally a way how to manipulate the output drawing in
+     plain Motif text widgets, without relying on features, which can
+     be only found in the not widly accepted 2.0 of this tyranosaurus
+     rex of software design blow.
+
+
+
+File: minfo.info,  Node: Invokation,  Prev: Introduction,  Up: Top
+
+
+
+Tag Table:
+Node: Top0
+Node: Introduction283
+Node: Invokation2217
+
+End Tag Table

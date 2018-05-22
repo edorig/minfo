@@ -1,0 +1,20 @@
+XCOMM
+XCOMM Copyright (C) 1997 by Marcin Dalecki
+XCOMM
+
+        DEFINES = -DUNCOMPRESS=\"zcat\"
+  SYS_LIBRARIES = -lm
+        DEPLIBS = XmClientDepLibs
+LOCAL_LIBRARIES = XmClientLibs
+
+XCOMM CDEBUGFLAGS = -g -Wall 
+
+SRCS=  	main.c display.c fops.c parse.c pix.c tip.c utils.c XpmButton.c \
+	resource.c
+
+OBJS=  	main.o display.o fops.o parse.o pix.o tip.o utils.o XpmButton.o \
+	resource.o
+
+
+MComplexProgramTarget(minfo, $(DEPLIBS), $(LOCAL_LIBRARIES))
+InstallAppDefaults(MInfo)

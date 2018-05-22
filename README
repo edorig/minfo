@@ -1,0 +1,204 @@
+Copyright (C) 1997 by Marcin Dalecki
+
+##########################################################################
+                                                                         
+   	    	    	    	 This is 
+   	    	    	    	 
+   	    	    	    MInfo Ver-1.7.19 
+   	    	    	    
+   	    	    	    
+   	    	an Motif widget set based info-file browser.   
+                                                                         
+##########################################################################
+
+
+
+ABSTRACT:
+=========
+
+  Info files are the plain ASCII text files used by the GNU online
+  documentation system.
+  
+  Welcome and enjoy the nice feeling of this program, which may
+  (accidentally)  appear already very similar to You :-).
+
+
+REQUIREMENTS:
+=============
+
+  To run this program You will need:
+
+    1. Of course X11; preferably R6.1, at least R5.
+
+    2. at least Motif-1.2 ;
+
+       *Note:   Intel Linux-2.x users may use the statically linked 
+       version of the  program, and get around without Motif at all...
+
+    3. the xpm library for the handling of colored pixmaps.
+
+
+  May be  the day isn't far away when it should be possible to compile and
+  run this program using the *free* Motif clone LessTif written by some
+  brave hearts on the net. (Watch out: http://www.hungry.com !)
+  
+  Currently the only obstacle, which will prevent it from compiling
+  cleanly under lesstif, is the way the structural highlighting is
+  implemented around. Please see display.c for details. The problems are
+  due to the poor quallity of lesstif's text widget. Since those people
+  werent very resposive to some (certainly correct) patches I tried to
+  give them from time to time, my personal conclusion is that You
+  shouldn't be waiting for lesstif becoming usable.
+
+
+1. MOTIVATION:
+==============
+
+  The documentation provided with the free programs from the GNU suite is
+  using the TeX typesetting system to generate:
+
+    * On screen readable/brows-able info files, which are plain ASCII.
+    This is where all the indirection information for hyper links goes in.
+
+    * __Very__ nice looking output ready for paper publication, which is
+    missing all the cross links and indirection facilies.
+
+  This documentation proved during my programming practice to be
+  extraordinary usefull! Therefore I feeled a strong desire to have a nice
+  browser for it. 
+  
+    Yes I know: They are already several of them: one special "editing"
+    mode for the emacs, one stand-alone terminal oriented application
+    called info, and last *but* least the compleatly useless xinfo.
+
+  Why by the hell did I create just another one? 
+  
+  Hmm... That's quite simple to answer: 
+  
+  I HATE emacs like the pest. It's tooooo FAT. The user interface is ugly
+  like HELL (Tought not anylonger true as of xemacs, but with this new
+  version of minfo, we are once again far ahead in esthetical terms :-). I
+  can't never remember the ominous Multi-Multi-Multi key sequences used by
+  emacs to accomplish even the simplest operations. I never know what the
+  God damn Meta is mapped to on the particular terminal I'm sitting in
+  front of (And I even don't want to know it!). Is it: Esc, Meta, Ctrl,
+  Alt, AltGr, F12 or whatever? Perhaps a foot button? I can't hold a
+  cigarette in one hand and use it...
+
+  The second program mentioned above isn't a true resort for anybody who
+  regrets the user interface of the emacs. In fact it's emulating the same
+  bogus key sequences which are used by the emacs's info browsing mode.
+  Therefore it's simply a non option.
+
+  The third program was what I used before --- after hacking some of the
+  most annoying bugs of it out. Getting bored by this, I decided to
+  produce something more useful. Thereafter I simply decided to share the
+  result with others...
+  
+  Why the hell did I use Motif for it? Simply because it's the smoothest
+  reasonably wide available widget set out there for X11, (despite of
+  course of Sun's OpenGL, which is becoming more and more obsolete with
+  every new X11 release...). And as I already mentioned above, there are
+  some guys out there trying to clone it compleatly! I like the idea about
+  having something esthetically satisfactory in the free software world.
+  If You are brave enough to dig into deep widget programming mood, I'm
+  encouraging You *explicitly*, by providing this app for example, to
+  contact them! Tought they showed to be not too responsible to any
+  patches I did send them from time to time.
+
+
+
+2. INSTALLATION:
+================
+
+  There are precompiled executables for Linux-2.1.x in this package, both
+  statically and dynamically linked with the proprietary motif lib's. They
+  may (should) work with earlier versions of the standard C library as of
+  5.4.38 but Your's mileage may vary. The program should too compile out
+  of the box on any UNIX platform featuring an ANSI compilant C compiler.
+  
+  Alternatively You may try to compile it Yourself, by issuing:
+
+	xmkmf -a
+	make
+	
+  If this fails, it is indeed *very* likely that the Motif installation
+  You are using is broken in respect of the auto-configuration program
+  imake. In case of XFree-3.2 it's sufficient to add the following lines
+  to the site.def file in /usr/X11R6/lib/X11/config:
+
+	#ifndef BUILD_MOTIF
+	#define BUILD_MOTIF 1
+	#endif
+
+  just after the line containing the following check:
+
+	#ifdef BeforeVendorCF
+
+  In version XFree-3.3 and newer, thyr broke the Motif imake support once
+  again.
+
+  As a last resort You may try to compile it by hand, or edit the Makefile
+  which is generated by my own configuration; taking all the standard
+  header dependencies out. This isn't difficult but simply annoying...
+  
+  Thereafter You will have the executable called "minfo". The rest of the
+  installation is quite simple. Just place minfo in the current path for
+  executables. NO bogus X-resource file is needed to make it work. I made
+  a lot of efforts to hide this broken concept from the user. If You don't
+  think that the resource mechanism is broken, just imagine how far less
+  memory hungry, blazingly fast and simple to use or program would X11 be
+  without or with far less of it! Or just try to explain somebody how it
+  works!
+  
+  WORNING:
+  
+    Pleast don't isntall MInfo.ad unless you are willing to synchronize it
+    with the built in defaults found as a string array in main.c!
+
+
+
+3. COPYRIGHT:
+=============
+
+  Please see the COPYRIGHT file which SHOULD be contained in this package.
+  (That's the GPL - General Public License as used by the FSF).
+
+
+
+4. USAGE:
+=========
+
+  Just start the executable and watch out for the buttons B-).  If You are
+  not intellectually impaired, You should know how to use it.
+
+
+
+5. CONTACTING THE AUTHOR:
+=========================
+
+  You can reach me currently at the following e-mail addresses:
+
+	  dalecki@namu01.gwdg.de
+
+  or alternatively
+
+    	  dalecki@math.uni-goettingen.de
+    		
+  If You like esp. to contribute something to this program, then please
+  take note that I'm using indent -kr (THE right way to use it) for
+  earlifying the sources. 
+  
+  Patches, enhancements, thanks, postcards, contract job offers, .... are
+  highly welcome! My preffered communication languages are: Polish or
+  German.
+  
+  Oh and please just remember that the code (litaraly C-code) of this
+  program is highly optimized. To be more exactly it is optimized in terms
+  of *programming* speed. Tought there where some improvement's in quality
+  during the past time.
+
+  
+  That's all:
+
+					Marcin Dalecki

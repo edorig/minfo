@@ -1,0 +1,17 @@
+New features as implemented in version 1.7.13:
+
+    Most notably structure highlighting, the quality of which, I'm quite
+    found about!
+
+    Many manu numerious bug fixes.
+    
+    Cross file note support.
+
+    Compleatly rewhamped graphical appearence. This is the prof of my
+    personal taste in those matters ;-).
+    
+    Overall code quality improvements.
+    
+    Checked the command line options -file and -path. Both are working
+    now the desirable way, allowing to open arbitrar Top node files from
+    the command line.
