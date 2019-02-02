@@ -1,13 +1,20 @@
 XCOMM
 XCOMM Copyright (C) 1997 by Marcin Dalecki
 XCOMM
-
+#include "Motif.tmpl" 
+#include "linux.cf" 
         DEFINES = -DUNCOMPRESS=\"zcat\"
   SYS_LIBRARIES = -lm
-        DEPLIBS = XmClientDepLibs
-LOCAL_LIBRARIES = XmClientLibs
+XCOMM        DEPLIBS = XmClientDepLibs
+        DEPLIBS = 
+XCOMM LOCAL_LIBRARIES = XmClientLibs -lXpm
+XCOMM We need to do this stupid thing as Linux is adding
+XCOMM -lXp to the Motif Client libraries even though it lacks
+XCOMM Xprint
+LOCAL_LIBRARIES =  -lXm -lXt -lXpm -lSM -lICE -lXext  -lX11 -lXpm 
 
-XCOMM CDEBUGFLAGS = -g -Wall 
+
+CDEBUGFLAGS = -g -Wall 
 
 SRCS=  	main.c display.c fops.c parse.c pix.c tip.c utils.c XpmButton.c \
 	resource.c
@@ -16,5 +23,6 @@ OBJS=  	main.o display.o fops.o parse.o pix.o tip.o utils.o XpmButton.o \
 	resource.o
 
 
-MComplexProgramTarget(minfo, $(DEPLIBS), $(LOCAL_LIBRARIES))
+XCOMM was MComplexProgramTarget(minfo, $(DEPLIBS), $(LOCAL_LIBRARIES))
+ComplexProgramTarget(minfo)
 InstallAppDefaults(MInfo)

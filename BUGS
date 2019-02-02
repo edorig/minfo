@@ -1,4 +1,6 @@
-The program can crash when the function parse_top of parse.c 
-is called. The crash seems to result from the call to strdup/strlen 
-in that function. 
+When deleting a bookmark, the program freezes completely.
+The program does not display accented characters correctly. 
+This is likely due to assuming an ASCII or ISO-8859 8 bit charset. 
+
+Unicode characters are thus shown as graphical characters.
 

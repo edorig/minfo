@@ -210,7 +210,7 @@ static XtResource new_resources[] =
     {"dirPath", "DirPath",
      XmRString, sizeof(String),
      XtOffsetOf(app_data_t, path), XmRString,
-     (XtPointer) "/usr/info/:/usr/local/info/:/usr/tex/info/"},
+     (XtPointer) "/usr/share/info/:/usr/local/share/info/:/usr/tex/info/"},
     {"dirFile", "DirFile",
      XmRString, sizeof(String),
      XtOffsetOf(app_data_t, file), XmRString,
@@ -308,7 +308,7 @@ static void prev_pushed(Widget w, XtPointer client_data, XtPointer call_data)
     if (page)
 	display_page(page);
     else
-	show_error_dialog("Preview node not found!");
+	show_error_dialog("Previous node not found!");
 }
 
 static void top_pushed(Widget w, XtPointer client_data, XtPointer call_data)
@@ -934,7 +934,7 @@ int main(int argc, char **argv)
     i = create_XmString_list(str,
 			     "Next\n"
 			     "Alt+Right\n"
-			     "Preview\n"
+			     "Previous\n"
 			     "Alt+Left\n"
 			     "Top\n"
 			     "Alt+Up\n"
@@ -1075,7 +1075,7 @@ int main(int argc, char **argv)
     XtAddCallback(fwrd_button, XmNactivateCallback, fwrd_pushed, NULL);
     XtManageChild(fwrd_button);
 
-    /* Preview Node Button */
+    /* Previous Node Button */
     prev_button = XmCreatePixmapPushButton(tools_on, "prevButton",
 					   prev_arm_xpm,
 					   prev_arm_xpm,
@@ -1265,7 +1265,7 @@ int main(int argc, char **argv)
      */
 
     XtRealizeWidget(top_level);
-    i = create_XmString_list(str, "Next\nPreview\nTop");
+    i = create_XmString_list(str, "Next\nPrevious\nTop");
     popup_menu =
 	XmVaCreateSimplePopupMenu(node_text,
 				  "popupMenu", popup_menu_cb,
@@ -1305,7 +1305,7 @@ int main(int argc, char **argv)
 
     TipAddWidget(tip_shell, back_button, "Backward", 0, 0);
     TipAddWidget(tip_shell, fwrd_button, "Forward", 0, 0);
-    TipAddWidget(tip_shell, prev_button, "Preview node", 0, 0);
+    TipAddWidget(tip_shell, prev_button, "Previous node", 0, 0);
     TipAddWidget(tip_shell, top_button, "Top node", 0, 0);
     TipAddWidget(tip_shell, next_button, "Next node", 0, 0);
     TipAddWidget(tip_shell, home_button, "Top directory node", 0, 0);

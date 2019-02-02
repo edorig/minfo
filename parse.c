@@ -140,12 +140,19 @@ struct top *parse_top(char *text)
 
 	    if ((token = strstr(buf, "Node: ")))
 		token += strlen("Node: ");
-
-	    curr = (struct node *) malloc(sizeof(struct node));
+	    /* if the string comparison fails, token=NULL no node exists */ 	    
+	    if (token==NULL) printf("NULL pointer with: %s\n",buf);
+            
+	   	    
+	    if (token!=NULL) {
+	      curr = (struct node *) malloc(sizeof(struct node));
 	    curr->next = NULL;
 	    curr->node = strdup(token);
+
 	    curr->tag = atoi(dp + 1);
 	    curr->file = NULL;
+	    };
+	    
 	    /* lookup filename; 
 	     * we are assuming here that the indirection tabe is sorted in
 	     * lower to upper order.

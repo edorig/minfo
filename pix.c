@@ -33,7 +33,7 @@
 #include <Xm/Xm.h>
 
 
-#include "xpm.h"
+/*#include "xpm.h" */ 
 
 /*
  * Setup the icon of the given application

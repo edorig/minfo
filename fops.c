@@ -232,6 +232,7 @@ static struct page *lookup_node_in_file_rr(int rr, char *node, char *file)
     /* 
      * Last resort, try to find the indirection table.
      */
+    if (cache->file==NULL) printf ("SCHLIKA...SCHLIKA..."); 
     name_dup = strdup(cache->file);
     if ((tmp = strstr(name_dup, ".info-"))) {
 	tmp[5] = '\0';
