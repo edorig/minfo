@@ -1,4 +1,4 @@
-When deleting a bookmark, the program freezes completely.
+
 The program does not display accented characters correctly. 
 This is likely due to assuming an ASCII or ISO-8859 8 bit charset. 
 

@@ -141,7 +141,7 @@ struct top *parse_top(char *text)
 	    if ((token = strstr(buf, "Node: ")))
 		token += strlen("Node: ");
 	    /* if the string comparison fails, token=NULL no node exists */ 	    
-	    if (token==NULL) printf("NULL pointer with: %s\n",buf);
+	    if (token==NULL) fprintf(stderr,"NULL pointer with: %s\n",buf);
             
 	   	    
 	    if (token!=NULL) {

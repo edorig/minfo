@@ -232,7 +232,7 @@ static struct page *lookup_node_in_file_rr(int rr, char *node, char *file)
     /* 
      * Last resort, try to find the indirection table.
      */
-    if (cache->file==NULL) printf ("SCHLIKA...SCHLIKA..."); 
+
     name_dup = strdup(cache->file);
     if ((tmp = strstr(name_dup, ".info-"))) {
 	tmp[5] = '\0';
@@ -405,7 +405,9 @@ void book_cb(Widget widget, XtPointer client_data, XtPointer call_data)
 {
     WidgetList items;
     int nitems;
-    int perm;
+    /* EO: Needed on Intel 64 bit: with a 32 bit int, the program will freeze 
+       because perm will always be zero. On Intel 32 bit, this is not necessary. */   
+    long int perm;
     int i;
     int item_no = (int) client_data;
 
@@ -444,13 +446,14 @@ void book_cb(Widget widget, XtPointer client_data, XtPointer call_data)
 		      XmNchildren, &items,
 		      XmNnumChildren, &nitems, NULL);
 
+
 	/* Destroy the oldest item in the list */
 	for (i = 0; i < nitems; ++i) {
+	  /* EO: What follows is a bit ugly, the pointer on the bookmarked page gets is cast into an integer, but trying to declare void *perm and using perm as a pointer here is causing a SIGSEGV */   
 	    XtVaGetValues(items[i], XmNuserData, &perm, 0);
 	    if (perm) {
 		/* unamanging before destroying stops parent 
 		   from displaying */
-
 		XtUnmanageChild(items[i]);
 		XtDestroyWidget(items[i]);
 		break;

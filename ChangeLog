@@ -1,3 +1,10 @@
+Sat Feb  9 09:47:24 CET 2019 Edmond Orignac
+	* Introduced a long int in the delete bookmark function to prevent
+	the program from freezing on Intel 64 bit. 
+	
+Sat Feb 2 11:09:11 2019
+	* Fixed a NULL pointer problem in parse_top
+
 Tue Oct 28 17:49:26 MET 1997 Marcin Dalecki
 
 	* Bookmark menu support added. Tought, we don't preserve the

@@ -1,0 +1,104 @@
+.TH MINFO 1 "2 February 2019"
+.SH NAME
+minfo \- X11/Motif browser for GNU Info documentation
+.SH SYNOPSIS
+.B minfo
+[
+.I -file <filename> 
+]
+[
+.I -path <path> 
+]  
+.SH DESCRIPTION
+.LP
+.I minfo
+is a Motif browser application for GNU Info documentation viewable
+with \fB info(1) \fP or \fB emacs(1) \fP. At startup, it displays the
+menu from the Top directory node of the hierarchy. Documentation appears as
+clickable hyperlinks that can be browsed using the arrow
+buttons. Clicking on the Home button returns to the top directory
+node. A search button allows searching for strings in the current
+page. The Go menu allows to jump to any item or node of the info menu
+of any given page. When cross-references are present in a page,
+it also permits to jump to any one of them.
+The bookmark menu allows to add/delete bookmarks on particular page.
+However, the bookmarks are not saved when the program is closed. 
+
+.SH MENUS
+The \fB File \fP menu allows to open an arbitrary file containing
+documentation in GNU info format.
+The \fB Go \fP menu allows to jump to an arbitrary item in a menu or
+cross-reference in a page. The bookmark menu allows to bookmark pages
+in the documentation. Bookmarks are lost when the program exits. 
+
+.SH OPTIONS
+
+.IP " -file <filename>" 
+Opens file \fI <filename> \fR 
+.IP "-path  <path> "
+Changes the search path for info files from the default \fC /usr/share/info:/usr/local/share/info \fR to \fC <path> \fR 
+.NP
+
+.SH LIMITATIONS
+The program can only show pages encoded in an 8-bit encoding such as ASCII
+or ISO-8859-1. Info pages encoded in UTF-8 for instance will not be rendered
+correctly.  
+
+.SH SEE ALSO
+.B info(1)
+.B emacs(1)
+
+.SH AUTHOR
+.PP
+Marcin Dalecki
+.PP
+.PP
+Copyright (c) 1996,1997
+.PP
+.SH LICENSE
+The program is distributed under the terms of the  GNU  General  Public
+License version 1  as published by the Free Software Foundation. see COPYING for details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
