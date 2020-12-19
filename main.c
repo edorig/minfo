@@ -109,15 +109,15 @@ static String fallback_resources[] =
     "*pane.separatorOn: True",
     "*background: #aeb2c3",
     "*fontList: -adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-*-*",
-    "*XmTextField.fontList: -adobe-courier-medium-r-normal-*-12-*-*-*-*-*-*-*",
+    "*XmTextField.fontList: -adobe-courier-medium-r-normal-*-12-*-*-*-*-*-iso10646-1",
     "*bookmarkButton.fontList: -adobe-courier-medium-r-normal-*-12-*-*-*-*-*-*-*",
-    "*XmText.fontList: -b&h-*-medium-r-*-*-12-*-*-*-m-*-iso8859-1",
+    "*XmText.fontList: -b&h-*-medium-r-*-*-12-*-*-*-m-*-iso10646-1",
     "*XmText.scrollLeftSide: True",
     "*XmList*fontList:-adobe-courier-medium-r-normal-*-12-*-*-*-*-*-*-*",
-    "*head1Font: -b&h-*-bold-r-*-*-16-*-*-*-m-*-iso8859-1",
-    "*head2Font: -b&h-*-bold-r-*-*-14-*-*-*-m-*-iso8859-1",
-    "*head3Font: -b&h-*-bold-r-*-*-14-*-*-*-m-*-iso8859-1",
-    "*head4Font: -b&h-*-bold-r-*-*-12-*-*-*-m-*-iso8859-1",
+    "*head1Font: -b&h-*-bold-r-*-*-16-*-*-*-m-*-iso10646-1",
+    "*head2Font: -b&h-*-bold-r-*-*-14-*-*-*-m-*-iso10646-1",
+    "*head3Font: -b&h-*-bold-r-*-*-14-*-*-*-m-*-iso10646-1",
+    "*head4Font: -b&h-*-bold-r-*-*-12-*-*-*-m-*-iso10646-1",
     "*XmText.foreground: black",
     "*XmText.background: gainsboro",
     "*XmTextField.foreground: Black",
@@ -125,7 +125,7 @@ static String fallback_resources[] =
     "*XmList.foreground: Black",
     "*XmList.background: gainsboro",
     "*tipShell.background: lemon chiffon",
-  "*tipShell.fontSet: -*-helvetica-medium-r-*-*-*-120-*-*-*-*-iso8859-*",
+  "*tipShell.fontSet: -*-helvetica-medium-r-*-*-*-120-*-*-*-*-iso10646-*",
     "*buttonLine.?.shadowThickness: 1",
     "*buttonLine.?.highlightThickness: 0",
     "*buttonLine.?.highlightOnEnter: False",
@@ -499,9 +499,9 @@ static void go_menu_cb(Widget widget, XtPointer client_data, XtPointer call_data
 
 		str = (XmString *) XtMalloc(n * sizeof(XmString));
 		if (item_no == 0)
-		    t = XmStringCreateLocalized("Please select an menu item:");
+		    t = XmStringCreateLocalized("Please select a menu item:");
 		else
-		    t = XmStringCreateLocalized("Please select an menu node:");
+		    t = XmStringCreateLocalized("Please select a menu node:");
 		menu = current_page->menu;
 		for (i = 0; i < n; i++) {
 		    if (item_no == 0)
@@ -561,7 +561,7 @@ static void load_xref_by_name(Widget dialog,
 	while (xref && strcmp(xref->name, xref_item))
 	    xref = xref->next;
 	XtFree(xref_item);
-	if (change_to_xref(xref, "Cross refference not found!"))
+	if (change_to_xref(xref, "Cross reference not found!"))
 	    XtPopdown(XtParent(dialog));
     }
 }
@@ -581,7 +581,7 @@ static void load_xref_by_node(Widget dialog, XtPointer client_data, XtPointer ca
 	while (xref && strcmp(xref->node, xref_node))
 	    xref = xref->next;
 	XtFree(xref_node);
-	if (change_to_xref(xref, "Cress refference node not found!"))
+	if (change_to_xref(xref, "Cress reference node not found!"))
 	    XtPopdown(XtParent(dialog));
     }
 }
@@ -612,10 +612,10 @@ static void go_xref_cb(Widget widget,
 
 		str = (XmString *) XtMalloc(n * sizeof(XmString));
 		if (item_no == 0)
-		    t = XmStringCreateLocalized("Please select a refference:");
+		    t = XmStringCreateLocalized("Please select a reference:");
 		else
 		    t = XmStringCreateLocalized(
-				       "Please select a reffered node:");
+				       "Please select a refered node:");
 		xref = current_page->note;
 		i = 0;
 		while (xref) {
@@ -939,7 +939,7 @@ int main(int argc, char **argv)
 			     "Top\n"
 			     "Alt+Up\n"
 			     "Menu by...\n"
-			     "Cross Refference by...\n"
+			     "Cross Reference by...\n"
 			     "Info Directory Node");
     widget = XmVaCreateSimplePulldownMenu(menu_bar, "goMenu", 1, go_cb,
 	  XmVaPUSHBUTTON, str[0], NULL, "Alt ~Ctrl<Key>osfRight", str[1],
@@ -1237,7 +1237,7 @@ int main(int argc, char **argv)
      * syntax highlighting in a reasonable manner, without using whole
      * special widgets.
      */
-    ((XmTextWidget) node_text)->text.output->Draw = do_draw;
+/*    ((XmTextWidget) node_text)->text.output->Draw = do_draw; */
 
     XtManageChild(main_window);
     XtManageChild(form);

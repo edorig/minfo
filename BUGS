@@ -4,3 +4,8 @@ This is likely due to assuming an ASCII or ISO-8859 8 bit charset.
 
 Unicode characters are thus shown as graphical characters.
 
+Attempting to replace XDrawString with Xutf8DrawString results in miserable
+failure. Xutf8DrawString depends on an XFontSet returned by XCreateFontSet, but calls to that function whatever the font name end with SIGSEGV.
+
+It may be better to rewrite the whole do_draw functions to use
+only Motif 2.x render tables and eliminate the low level Xlib.
